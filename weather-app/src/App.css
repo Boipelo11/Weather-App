@@ -1,0 +1,119 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  font-weight: 200;
+}
+
+/* Search bar styles */
+.search-btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.497);
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.497);
+  border-radius: 5px;
+  color: #fff;
+  width: 70%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 3vh;
+  text-align: center; 
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  input {
+    width: 90%;
+  }
+  
+  
+  input {
+    margin-left: 0;
+  }
+}
+
+/* City stats styles */
+.city-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 13px;
+  background-color: rgba(0, 0, 0, 0.497);
+  width: 400px;
+  margin-left: 370px;
+}
+/* Media query for smaller screens for city-stats */
+@media screen and (max-width: 768px) {
+  .city-stats {
+    width: 90%; 
+    margin-left: 0; 
+  }
+}
+
+
+/* 3 Hour Interval styles */
+.daily-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.497);
+  width: 680px;
+  border-radius: 13px;
+  justify-content: center;
+  margin-left: 250px;
+  margin-bottom: 32px;
+  margin-top: 45px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 3px;
+  text-align: left; 
+}
+
+.summary-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.summary {
+  text-align: center;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .daily-summary {
+    width: 90%; 
+    margin-left: 0; 
+  }
+
+  .title {
+    text-align: center; 
+  }
+
+  .summary-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
