@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import coldBg from './assets/cold.png'
-import hotBg from './assets/hot.jpg'
+import coldBg from './assets/cool.jpg';
+import hotBg from './assets/warm.jpg'
 
 function App() {
 	// State variables for storing weather data
@@ -157,22 +157,22 @@ function App() {
    
 
 	// useEffect to show an alert on page load
-	useEffect(() => {
+    useEffect(() => {
 		window.onload = () => {
-		  alert('Enter a location in the search bar to show data');
+	alert('Enter a location in the search bar to show data');
 		};
-	  
+
 		const threshold = 20; // Temperature threshold in Celsius
-	  
+
 		// Check the temperature and set the background accordingly
 		if (parseFloat(temp) > threshold) {
-		  setBg(hotBg);
+ setBg(hotBg);
 		} else {
-		  setBg(coldBg);
+ setBg(coldBg);
 		}
 	
 }); 
-	  
+
 
 	return (
 		<div style = {{backgroundImage: `url(${bg})`}}>
