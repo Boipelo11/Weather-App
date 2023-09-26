@@ -246,7 +246,8 @@ function App() {
 			</div>
 
 			<div className="daily-summary">
-				<h4>3 Hour Interval</h4>
+				<h2>3 Hour Interval</h2>
+				<br/>
 				<div className="summary-container">
 					<div className="summary sum1">
 						<p className="day">{time1}</p>

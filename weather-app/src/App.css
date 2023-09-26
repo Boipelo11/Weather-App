@@ -1,5 +1,6 @@
 
 
+/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
@@ -19,24 +20,33 @@
 }
 
 /* Search bar styles */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .search-btn {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 50px;
   border: none;
   background-color: rgba(0, 0, 0, 0.497);
 }
 
 input {
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #ccc;
   background-color: rgba(0, 0, 0, 0.497);
-  border-radius: 5px;
+  border-radius: 50px;
   color: #fff;
-  width: 70%;
+  width: 300px;
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 3vh;
-  text-align: center; 
+  text-align: center;
+  justify-content: space-between;
 }
 
 /* Media query for smaller screens */
@@ -44,49 +54,50 @@ input {
   input {
     width: 90%;
   }
-  
-  
-  input {
-    margin-left: 0;
-  }
 }
 
 /* City stats styles */
-/* .city-stats {
-  display: flex;
+.City {
+  padding: 40px;
   flex-direction: column;
+  border-radius: 13px;
   align-items: center;
-  border-radius: 13px;
   background-color: rgba(0, 0, 0, 0.497);
-  width: 400px;
-  margin-left: 370px;
-} */
-
-.City{
-  padding: 40px;
-  flex-direction: column;
-  border-radius: 13px;
-  background-color: rgba(0, 0, 0, 0.497);
- 
 }
 
+.City h1,
+.City img {
+  align-items: center;
+}
 
+.City h3,
+.City .description {
+  flex: 1;
+}
 
-.stat{
-  padding: 40px;
-  flex-direction: column;
-  border-radius: 13px;
+.other-stats {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.497);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.stat {
+  padding: 40px;
+  border-radius: 13px;
+  background-color: rgba(0, 0, 0, 0.497);
+  flex: 1;
+  max-width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
 /* Media query for smaller screens for city-stats */
 @media screen and (max-width: 768px) {
   .city-stats {
-    width: 90%; 
-    margin-left: 0; 
+    width: 90%;
+    margin-left: 0;
   }
 }
-
 
 /* 3 Hour Interval styles */
 .daily-summary {
@@ -94,19 +105,18 @@ input {
   flex-direction: column;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.497);
-  width: 680px;
+  width: 600px;
   border-radius: 13px;
   justify-content: center;
-  margin-left: 250px;
+  margin-left: 40px;
+  margin-top: 32px;
   margin-bottom: 32px;
-  margin-top: 45px;
-  
 }
 
 .title {
   font-weight: bold;
   margin-bottom: 3px;
-  text-align: left; 
+  text-align: left;
 }
 
 .summary-container {
@@ -123,12 +133,12 @@ input {
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .daily-summary {
-    width: 90%; 
-    margin-left: 0; 
+    width: 90%;
+    margin-left: 0;
   }
 
   .title {
-    text-align: center; 
+    text-align: center;
   }
 
   .summary-container {
