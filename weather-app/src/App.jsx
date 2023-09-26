@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import coldBg from './assets/cool.jpg';
-import hotBg from './assets/warm.jpg'
+import coldBg from './assets/cold.png';
+import hotBg from './assets/hot.png'
 
 function App() {
 	// State variables for storing weather data
@@ -194,25 +194,30 @@ function App() {
 			<div className="city-stats">
 				<div className="City">
 				<h1>{data.city ? data.city.name : null}</h1>
-				</div>
-				<div className="icon-temp">
+				
+				
+				
 					{/* <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="icon" /> */}
 					{/* <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="image" /> */}
 					<img src={icon} alt="" />
 					<h3>{temp} °C</h3>
-				</div>
+				
 				<p className="description">{weather}</p>
+				</div>
+				<br/>
 				<div className="other-stats">
 					<div className="stat">
 						<p className="title">Feels Like</p>
 						<svg stroke="#fff" fill="#fff" stroke-width="0" viewBox="0 0 256 512" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M192 384c0 35.346-28.654 64-64 64s-64-28.654-64-64c0-35.346 28.654-64 64-64s64 28.654 64 64zm32-84.653c19.912 22.563 32 52.194 32 84.653 0 70.696-57.303 128-128 128-.299 0-.609-.001-.909-.003C56.789 511.509-.357 453.636.002 383.333.166 351.135 12.225 321.755 32 299.347V96c0-53.019 42.981-96 96-96s96 42.981 96 96v203.347zM208 384c0-34.339-19.37-52.19-32-66.502V96c0-26.467-21.533-48-48-48S80 69.533 80 96v221.498c-12.732 14.428-31.825 32.1-31.999 66.08-.224 43.876 35.563 80.116 79.423 80.42L128 464c44.112 0 80-35.888 80-80z"></path></svg>
 						<p className="units">{feels_like} °C</p>
 					</div>
+					<br/>
 					<div className="stat">
 						<p className="title">Wind Speed</p>
 						<svg stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
 						<p className="units">{windspeed} km/h</p>
 					</div>
+					<br/>
 					<div className="stat">
 						<p className="title">Humidity</p>
 						<svg stroke="#fff" fill="currentColor" stroke-width="0" viewBox="0 0 30 30" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M7.56,17.19c0-0.88,0.24-1.89,0.72-3.03s1.1-2.25,1.86-3.31c1.56-2.06,2.92-3.62,4.06-4.67l0.75-0.72
@@ -236,6 +241,7 @@ function App() {
 						</svg>
 						<p className="units">{humidity} %</p>
 					</div>
+					<br/>
 				</div>
 			</div>
 

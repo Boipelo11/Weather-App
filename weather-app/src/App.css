@@ -52,7 +52,7 @@ input {
 }
 
 /* City stats styles */
-.city-stats {
+/* .city-stats {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,6 +60,24 @@ input {
   background-color: rgba(0, 0, 0, 0.497);
   width: 400px;
   margin-left: 370px;
+} */
+
+.City{
+  padding: 40px;
+  flex-direction: column;
+  border-radius: 13px;
+  background-color: rgba(0, 0, 0, 0.497);
+ 
+}
+
+
+
+.stat{
+  padding: 40px;
+  flex-direction: column;
+  border-radius: 13px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.497);
 }
 /* Media query for smaller screens for city-stats */
 @media screen and (max-width: 768px) {
@@ -82,6 +100,7 @@ input {
   margin-left: 250px;
   margin-bottom: 32px;
   margin-top: 45px;
+  
 }
 
 .title {
